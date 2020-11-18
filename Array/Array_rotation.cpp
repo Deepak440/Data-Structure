@@ -3,7 +3,7 @@
 // Write to function to implement both left or right rotation
 
 #include <iostream>
-#define N 6      // Macro N = 6  number of array elements
+#define N 6      // Macro N = 6  number of array element
 #define D 2      // Macro D = 2  number of elemnt to be rotated
 #define endl "\n"
 
