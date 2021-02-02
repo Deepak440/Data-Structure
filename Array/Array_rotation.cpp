@@ -50,7 +50,7 @@ int main()
 
     // Take input elements
     std :: cout << "Enter the elements : " << endl;
-    for(int i =0; i < 6; i++ )
+    for(int i =0; i < N; i++ )
     {
         std :: cin >> arr[i];
     }
