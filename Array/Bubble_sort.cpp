@@ -1,5 +1,4 @@
 //Sorting of array by bubble sort
-
 #include <iostream>
 
 void Print_Array(int n1 ,int* arr1)
@@ -65,4 +64,4 @@ int main()
 }
 
 // Worst case Time complexity : O(n*n)
-// Best case Time complexity : O(n)     When elements are already sorted
+// Best case Time complexity : O(n)  When elements are already sorted
