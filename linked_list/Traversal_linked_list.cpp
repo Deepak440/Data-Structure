@@ -1,4 +1,6 @@
 //Traversal of singly linked list
+            // Iterative 
+            // Recursive
 
 #include <iostream>
 using namespace std;
@@ -9,7 +11,7 @@ class Node{
 public:
 	int data;
 	Node *next;
-}
+};
 
 // Function to print all elements of linked list
 void Print_linked_list(Node *temp)
@@ -18,7 +20,17 @@ void Print_linked_list(Node *temp)
 		cout << temp -> data << " ";
 		temp = temp -> next;
 	}
+	cout << "\n";
 }
+
+// Recursive Function to print all elments of list
+void Recursive_Print_List( Node *p )
+{
+	if(p != NULL)
+	{
+	cout << p -> data << " ";
+	Recursive_Print_List( p -> next);
+}}
 
 int main()
 {
@@ -42,5 +54,7 @@ int main()
 	third -> next = NULL;
 
 	Print_linked_list(head);
+
+	Recursive_Print_List(head);
 
 }
