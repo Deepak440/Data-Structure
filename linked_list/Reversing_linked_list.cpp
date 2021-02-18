@@ -30,6 +30,13 @@ void push( Node **head , int New_data)
 
 }
 
+// Reversing the links of the node
+void Reverse_linkedlist(Node **head )
+{
+	
+
+}
+
 // Reverse the linked list by reversing node data
 void Reverse_linkedlist_(Node *head , int length)
 {
@@ -53,9 +60,6 @@ void Reverse_linkedlist_(Node *head , int length)
 
 }
 
-
-
-
 int main()
 {
 	Node * Head = NULL;
@@ -75,5 +79,12 @@ int main()
     
     // Print the reversed linked list
     Print_linked_list(Head);
+
+    //Again reverse the list by sliding pointer method
+    Reverse_linkedlist(&Head);
+
+    //Print the reversed linked list
+    Print_linked_list(Head);
+
     return 0; 
 }	
