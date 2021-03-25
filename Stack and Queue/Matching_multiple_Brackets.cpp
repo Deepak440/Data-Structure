@@ -1,5 +1,5 @@
-// C++ program to check wheather the expresssion have balanced paraentesies or not
 
+// C++ program to check wheather the expresssion have balanced paraentesies or not
 
 #include <iostream>
 using namespace std;
