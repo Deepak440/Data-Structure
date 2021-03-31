@@ -67,7 +67,15 @@ void Insert(Node *root , int key)
 	}
 
 	Node* temp2 = new Node(key);
-	temp ->left = temp2;
+	if(temp -> data > key)
+	{
+	temp ->left = temp2;	
+	}
+	else
+	{
+		temp -> right = temp2;
+	}
+	
 	temp2 -> left = NULL;
 	temp2 -> right = NULL;
 
