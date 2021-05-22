@@ -11,10 +11,10 @@ void Print_Array(int n1 ,int* arr1)
 
 void Bubble_sort(int n , int arr[])
 {
-    int count ;
+    int flag ;
 	for(int i = 0;  i < n-1 ; i++)
 	{
-	    count = 0;
+	    flag = 0;
 		for(int j = 0; j < n-1-i; j++)
 		{
 			if(arr[j] > arr[j + 1])
@@ -23,10 +23,10 @@ void Bubble_sort(int n , int arr[])
 				temp = arr[j];
 				arr[j] = arr[j+1];
 				arr[j + 1] = temp;
-				count ++;
+				flag = 1;
 			}
 		}
-		if(count == 0)
+		if(flag == 0)
 		{
 		    break;
 		}

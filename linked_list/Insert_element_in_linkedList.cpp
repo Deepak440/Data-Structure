@@ -1,4 +1,4 @@
-// C++ Program to insert node in the beigning , after a node and at the end
+
 
 #include <iostream>
 using namespace std;
@@ -61,6 +61,72 @@ void insert_after(Node *prev , int data)
 
 }
 
+
+
+// Function to delete first node of list
+void delete_fist_node(Node **head)
+{
+	if(*head == NULL)
+	{
+		cout << "No element removed ! List is already empty\n";
+	}
+	Node *temp = *head;
+	*head = (*head) -> next;
+    // Free the memory occupied by the first node;
+    delete temp ;
+}
+
+//Function to Deleting_last_node
+void Deleting_last_node(Node ** head)
+{
+    Node *temp =  *head;
+    Node *prev = NULL;
+    
+    while(temp-> next != NULL)
+    {
+        prev = temp;
+        temp  = temp -> next;
+    }
+    prev -> next = NULL;
+    delete temp;;
+    return ;
+}
+
+// Function Delete_given_node
+void Delete_given_node(Node **head , int node_value)
+{
+	Node *temp = *head;
+	Node *prev = NULL;
+
+     // if fist node contain the node_value
+	if(temp ->data == node_value && temp != NULL)
+	{
+		*head = temp -> next;
+		delete temp;
+		return ;
+	}
+	else{
+
+	while(temp != NULL && temp->data != node_value){
+		prev = temp;
+		temp = temp -> next;
+
+	}
+	if(temp == NULL)
+	{
+		cout << "No element Found\n";
+		return ;
+	}
+
+	prev -> next =  temp -> next;
+
+	delete temp;
+	return;
+}
+}
+
+
+
 int main()
 {
 	Node * Head = NULL;
@@ -72,10 +138,14 @@ int main()
 	//Insert element after given node
 	insert_after(Head , 2);
 
+	delete_fist_node(&Head);
+    Deleting_last_node(&Head);
+
+	Delete_given_node(&Head , 2);
 	
 
 	//Inserting at the end
-	append(&Head , 4);
+	 append(&Head , 4);
 	Print_linked_list(Head);
 
 }
